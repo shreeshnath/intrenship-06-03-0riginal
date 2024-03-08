@@ -1,0 +1,163 @@
+
+# addition of two number
+'''
+print("Hello")
+
+x= int(input("enter the number 1"))
+y=int(input("enter the number 2"))
+z=x+y
+print("the sum of two numbers ",z)
+
+'''
+#max of two numbers.
+
+'''
+
+x= int(input("enter the number 1"))
+y=int(input("enter the number 2"))
+max_number=max(x,y)
+print("max_number",max_number)
+
+'''
+
+#factoril of a number.
+
+'''
+def factorial(n):
+    if n==1:
+        return n
+    else:
+        return n *factorial(n-1)
+    
+    
+num=int(input("enter the number"))
+  
+if num<0:
+      print(" no factorial ")
+elif num==0:
+    print("the factorial of o is 1 ")
+else:
+  print("the factorial of ",num,"is",factorial(num)) 
+
+  '''
+
+
+
+# simple interst 
+
+'''
+x=int(input("enter the printipal value: "))
+y=float(input("enter the rate of interst with in 100:"))
+z=float(input("enter the time period required in years: "))
+si=x*y*z/100
+print("simple interest for the given data is:",si)
+total =x+si
+print("the total amount including simple interest:",total)
+
+'''
+
+
+
+#compound interst
+
+'''
+x=int(input("enter the printipal value: "))
+y=float(input("enter the rate of interst with in 100:"))
+z=float(input("enter the time period required in years: "))
+total_amount=x*(1+(y/100))** z
+print("total_amount",total_amount)
+ci=total_amount-x
+print("coumpand intrest",ci)
+
+'''
+
+#amstrong of a number
+
+'''
+def armstrong_number(number):
+    return sum(int(digit)**len(str(number)) for digit in str(number)) == number
+ 
+
+num = int(input("enter the number"))
+if armstrong_number(num):
+    print("number is an Armstrong number")
+else:
+    print("number is not an Armstrong number")
+
+
+'''
+
+#area of a circle 
+ 
+ '''
+r=float(input("enter the radius of circle"))
+pi=3.14
+area =pi*r*r
+print("area of a circle ",area)
+
+'''
+
+# to print all prime numbers in an interval 
+
+'''
+
+def prime(x, y):
+
+    prime_list = []
+    for i in range(x, y):
+        if i == 0 or i == 1:
+            continue
+        else:
+            for j in range(2, int(i/2)+1):
+                if i % j == 0:
+                    break
+            else:
+                prime_list.append(i)
+    return prime_list
+ 
+# Driver program
+starting_range = 2
+ending_range = 7
+lst = prime(starting_range, ending_range)
+if len(lst) == 0:
+    print("There are no prime numbers in this range")
+else:
+    print("The prime numbers in this range are: ", lst)
+
+'''
+
+
+# to check prime number
+'''
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+number = int(input("Enter a number: "))
+
+if is_prime(number):
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is not a prime number."
+
+'''
+
+# fibnocii serise
+
+   
+n = 10
+num1 = 0
+num2 = 1
+next_number = num2  
+count = 1
+ 
+while count <= n:
+    print(next_number, end=" ")
+    count += 1
+    num1, num2 = num2, next_number
+    next_number = num1 + num2
+print()
